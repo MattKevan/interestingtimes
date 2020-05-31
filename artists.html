@@ -1,0 +1,20 @@
+---
+title: Artists
+layout: page
+lead: Choose from iconic posters, timeless magazine covers and vintage travel posters in our impressive collection of vintage art prints.
+permalink: "/artists/"
+
+---
+<div class="card listing">
+	<div class="container">
+		<div class="row">
+
+			
+			{% for item in site.artist %}
+				{% include grid-artist.html %}
+			{% endfor %}
+
+		</div>
+	</div>
+</div>
+

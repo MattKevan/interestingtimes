@@ -1,0 +1,13 @@
+---
+- id: A5
+  price: "10.60"
+- id: A4
+  price: "18.60"
+- id: A3
+  price: "28.60"
+- id: 5x7
+  price: "10.60"
+- id: 8x10
+  price: "18.60"
+- id: 11x14
+  price: "28.60"

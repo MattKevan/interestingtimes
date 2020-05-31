@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+<div class="row">
+
+	<div class="product col-12 col-md-8">
+
+		<div class="image"><img src="{{ page.image_fullxfull_url_0 }}" /></div>
+		<hr>
+
+		<div class="product-purchase d-md-none">
+			{% include product-purchase.html %}
+		</div>
+
+		<div class="product-info">
+			<div class="excerpt">{{ page.excerpt }}</div>
+			<div class="detail">
+				{% include artwork-info.html %}
+			</div>
+			<hr>
+			{% include product-reviews.html %}
+			
+			<hr>
+			
+			<div class="tags">
+				<p class="s">
+					{% for tag in page.tags %}
+						<span class="tag">{{ tag }}</span>
+					{% endfor %}
+				</p>
+			</div>
+
+		</div>
+
+	</div><!--/product-->
+
+	<div class="product-purchase col-md-4 d-none d-md-block">
+		{% include product-purchase.html %}
+	</div>
+
+</div>
+
+<hr>
+
+<div class="row related-products">
+	<div class="col-12">
+		<h3>Related products</h3>
+	</div>
+
+	{% for item in site.artwork %}
+		{% if item.section_id == page.section_id %}
+			{% if item.listing_id != page.listing_id %}
+				<div class="related-products-paged col-6 col-md-4 product-teaser">
+				{% include product-teaser.html %}
+			</div>
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+</div>
+<ul class="pagination justify-content-center related-products-pager"></ul>
+<a class='next'>Next &raquo;</a>

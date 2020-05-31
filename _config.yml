@@ -1,0 +1,60 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Follow
+email: m@kevan.tv
+description: Blogs and interesting people
+baseurl: "" # the subpath of your site, e.g. /blog
+
+url: "https://www.thedoveandtheseagull.com" # the base hostname & protocol for your sites
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: _sass
+
+excerpt_separator: ---
+collections:
+  categories:
+    output: true
+    permalink: /categories/:path/
+  collect:
+    output: true
+    permalink: /collections/:path/
+  artwork:
+    output: true
+    permalink: /artwork/:path/
+  artist:
+    output: true
+    permalink: /artists/:path/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: categories
+    values:
+      layout: category
+  -
+    scope:
+      path: ""
+      type: collect
+    values:
+      layout: collection
+  -
+    scope:
+      path: ""
+      type: artwork
+    values:
+      layout: artwork
+  -
+    scope:
+      path: ""
+      type: artist
+    values:
+      layout: artist

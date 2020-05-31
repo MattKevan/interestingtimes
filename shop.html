@@ -1,0 +1,28 @@
+---
+title: Woodcut prints
+layout: page
+lead: 
+permalink: "/shop/"
+section: 19058808
+
+---
+<div class="card listing">
+	<div class="container">
+		<div class="row">
+			{% for listing in site.data.EtsyListingsDownload %}
+					
+<!-- Artwork grid -->
+<div class="col-xs-6 col-sm-4 col-md-4 artwork-grid">
+	<a href="{{ item.url }}">
+	<div class="item-inner" data-mh="col-text">
+		<img src="{{ listing.IMAGE1 }}" alt="{{ listing.title }}" />
+		<h4>{{ listing.TITLE }}</h4>
+		<p class="artist">By {{ item.artist }}</p>
+    </div></a>
+</div>
+			{% endfor %}
+
+		</div>
+	</div>
+</div>
+
