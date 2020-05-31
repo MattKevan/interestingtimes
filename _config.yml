@@ -23,15 +23,6 @@ collections:
   categories:
     output: true
     permalink: /categories/:path/
-  collect:
-    output: true
-    permalink: /collections/:path/
-  artwork:
-    output: true
-    permalink: /artwork/:path/
-  artist:
-    output: true
-    permalink: /artists/:path/
 
 defaults:
   -
@@ -40,21 +31,3 @@ defaults:
       type: categories
     values:
       layout: category
-  -
-    scope:
-      path: ""
-      type: collect
-    values:
-      layout: collection
-  -
-    scope:
-      path: ""
-      type: artwork
-    values:
-      layout: artwork
-  -
-    scope:
-      path: ""
-      type: artist
-    values:
-      layout: artist
