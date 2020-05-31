@@ -1,5 +1,5 @@
 ---
-title: The Dove & The Seagull
+title: Follow
 layout: page
 featured: 
  - 291707577
@@ -19,7 +19,7 @@ featured:
 			<div class="row">
 
 
-			{% for item in site.section %}
+			{% for item in site.categories %}
 
 				<div class="col-xs-12 col-sm-6 col-md-4">
 					<div class="category category1">
@@ -42,16 +42,6 @@ featured:
 		</div>
 				<div class="row">
 
-				{% for feat in page.featured %}
-					{% for item in site.artwork %}
-
-					{% if feat == item.listing_id %}
-						{% include product-teaser.html %}
-
-					{% endif%}
-					{% endfor %}
-					{% endfor %}
-			
      
 
     </div>
