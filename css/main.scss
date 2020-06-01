@@ -14,6 +14,7 @@ hr {
 }
 
 .s {font-size: 14px;}
+.xs {font-size: 12px;}
 
 .lead {
     //font-family: 'IBM Plex Serif', serif;
@@ -40,76 +41,53 @@ hr {
 }
 
 .teaser {
-    margin-bottom: 40px;
-    img {width: 100%;}
-    h4 {margin-top: 10px;}
+ 
 }
 
-.product-teaser {
-    margin-bottom: 40px;
-	img { width: 100%; }
-    h3 {
-        font-size: 1em;
-        font-family: $font-family-sans-serif;
-        line-height: 1.5em;
-        margin-bottom: 0;
-    }
-    .price {
-        font-weight: 700;
-    }
-}
-.crumb {
-    color: #555;
-    a {color: #555;}
-    margin-bottom: 8px;
-}
 
-.product {
-    .excerpt{
-        p:first-child {
-            font-size: $lead-font-size;
-            font-weight: $lead-font-weight;
-        }
-    }
-
-    .image {
-        img {width: 100%;}
-    }
-  
-}
-.review {
-    margin-bottom: 30px;
-    p {margin: 0 0 5px 0;}
-    p.attribution {
-        margin-bottom: 0;
-        color: #666;
-    }
-}
-.product-purchase {
-    h1 {font-size: 2em;}
-    .hide {display: none;}
-    .price {
-        font-size: 1.6em;
-        font-weight: 700;
-    }
-    hr { margin: 1.5rem 0;}
-    .proposition {
-        ul {
-            margin: 0;
-            padding: 0;
-        }
-        li {
-            list-style-type: none;
-            margin-bottom: 5px;
-        }
-    }
-}
-.tag {
-    padding: 3px 8px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.1);
+p.tags {
+    margin:10px 0 0 0;
     display: inline-block;
-    margin: 0 2px 5px 0;
-    color: #555;
+    span {
+        border-color: #ECECEC;
+        border-style: solid;
+        border-width: 1px;
+        padding: 3px 5px;
+        margin-right: 2px;
+        margin-bottom: 8px;
+        display: inline-block;
+        a {color: #444;}
+    }
+}
+
+.grid {
+    margin-bottom: 30px;
+
+    .teaser {
+        padding: 20px;
+    }
+}
+.feedEkList{
+    list-style:none outside none;
+    padding:0; 
+}
+
+.feedEkList li{
+    margin: 0 0 30px 0;
+    img {display: none;}
+}
+
+.itemTitle a{
+    font-size: $h4-font-size;
+    font-weight: $headings-font-weight;
+    text-decoration:none; 
+}
+
+.itemTitle a:hover{ 
+    text-decoration:underline;
+}
+
+.itemDate{
+    font-size:11px;
+    color:#AAAAAA;
 }

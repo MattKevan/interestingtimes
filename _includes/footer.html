@@ -7,12 +7,7 @@
   <div class="container">
   	<div class="row">
   		<div class="col-xs-12 col-sm-4">
-  			<ul>
-  				<li>About us</li>
-  				<li>Shipping</li>
-  				<li>Returns policy</li>
-  				<li>Contact us</li>
-  			</ul>
+  			
   		</div>
 
   	</div>
@@ -22,7 +17,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-4">
-        <p><a href="https://www.kevan.tv" target="_blank"><img src="{{ site.baseurl }}/images/site/mk.svg" alt="Matt kevan"></a></p>
+       
       </div>
         <div class="col-xs-8">
           
@@ -35,6 +30,16 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
-<script src="{{ site.baseurl }}/js/jquery.matchHeight-min.js"></script>
 <script src="{{ site.baseurl }}/js/pagination.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/FeedEk.js"></script>
 <script src="{{ site.baseurl }}/js/scripts.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#divRss').FeedEk({
+        FeedUrl:'{{ page.rss_link }}',
+        MaxCount: 3,
+        TitleLinkTarget:'_blank',
+        
+        });
+      });
+</script> 

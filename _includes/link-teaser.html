@@ -1,0 +1,26 @@
+<div class="teaser {% for cat in item.tags %}{{ cat | slugify | append: ' ' }}{% endfor %}">
+
+			{% if item.image %}
+			<a href="{{ item.url }}" target="_blank">
+				<img class="logo" src="{{ item.image }}" alt="{{ item.title }}" />
+			</a>{% endif %}
+
+			<h4><a href="{{ item.url }}">{{ item.title }}</a></h4>	      
+
+			<p>{{ item.description }}</p>	
+			{% if item.author %}
+				<p class="author s">{{ item.author }}</p>
+			{% endif %}
+
+			
+			{% if item.tags %}
+		    <p class="tags xs">
+			    
+			    {% for tag in item.tags %}
+					<span>{{ tag }}</span>
+				{% endfor %}
+
+			</p>
+			{% endif %}
+
+</div>

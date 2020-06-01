@@ -6,12 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Follow
+title: The Interesting Times
 email: m@kevan.tv
 description: Blogs and interesting people
 baseurl: "" # the subpath of your site, e.g. /blog
 
-url: "https://www.thedoveandtheseagull.com" # the base hostname & protocol for your sites
+url: "" # the base hostname & protocol for your sites
 
 # Build settings
 markdown: kramdown
@@ -19,10 +19,14 @@ sass:
   sass_dir: _sass
 
 excerpt_separator: ---
+
 collections:
   categories:
     output: true
     permalink: /categories/:path/
+  links:
+    output: true
+    permalink: /links/:path/
 
 defaults:
   -
@@ -31,3 +35,9 @@ defaults:
       type: categories
     values:
       layout: category
+  -
+    scope:
+      path: ""
+      type: links
+    values:
+      layout: link

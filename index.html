@@ -1,47 +1,13 @@
 ---
-title: Follow
+title: The Interesting
 layout: page
-featured: 
- - 291707577
- - 791348506
- - 528044733
 ---
 <div class="row">
-			<div class="col-xs-12">
-
-				<h1 class="title">Beautiful prints that  turn your house into  a home</h1>
-
-			</div>
-		</div>
-
-
-
-			<div class="row">
-
-
-			{% for item in site.categories %}
-
-				<div class="col-xs-12 col-sm-6 col-md-4">
-					<div class="category category1">
-						<div class="inner">
-							<h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
-						</div>
-					</div>
-				</div>
-				{% endfor %}
-
-
-			</div>
-
-
-
-<div class="row">
-	<div class="col-xs-12">
-			<h2 class="title">Featured artwork</h2>
-		</div>
-		</div>
-				<div class="row">
-
-     
-
-    </div>
+{% for item in site.links %}
+	<div class="col-sm-12 col-md-6 col-lg-4 grid ">
+		 <div class="card h-100 ">
+ {% include link-teaser.html %}
+</div>
+	</div>
+{% endfor %}
+</div>
